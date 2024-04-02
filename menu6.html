@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url(https://i.ibb.co/7Smjmpk/Colorido-Ilustraci-n-Proyecto-de-Grupo-En-Blanco-Presentaci-n-de-Educaci-n-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .menu {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .welcome {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .icon {
+            display: inline-block;
+            margin: 20px;
+        }
+        .icon img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10%;
+        }
+        .icon p {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .logout-btn {
+            margin-top: 30px;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body><br><br><br><br><br><br><br><br><br>
+    <div class="menu">
+        <div class="welcome">¡Bienvenido!</div>
+        <br>
+        <br>
+        <p> ¿Qué desea realizar el día de hoy? </p>
+        <br>
+        <br>
+        
+
+        <div class="icon">
+                <p>Carta de felicitaciones</p><br>
+                <a href="#" onclick="imprimirPDF('Cartadefelicitaciones.pdf')">
+                    <img src="icono11.png" alt="Estudiantes">
+                </a>
+        </div>
+        <div class="icon">
+                <p>Boletines</p><br>
+                <a href="#" onclick="imprimirPDF('boletin.pdf')">
+                    <img src="icono12.png" alt="Estudiantes">
+                </a>
+        </div>
+        <div class="icon">
+                <p>Constancia de estudio</p><br>
+                <a href="#" onclick="imprimirPDF('Constancia_de_Estudio-Educacion_Primaria (1).pdf')">
+                    <img src="icono10.png" alt="Notas detalladas">
+                </a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> <br> <br> <br> <br> <br> <br> <br>
+        <p style="text-align: right;" bis_size='{"x":10,"y":771,"w":578,"h":40,"abs_x":41,"abs_y":1142}'><a href="menu1.html" style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 20px;" rel="noopener noreferrer" bis_size='{"x":218,"y":771,"w":161,"h":40,"abs_x":249,"abs_y":1142}'><span style="font-family: Verdana, Geneva, sans-serif;" bis_size='{"x":238,"y":781,"w":121,"h":19,"abs_x":269,"abs_y":1152}'><strong bis_size='{"x":238,"y":781,"w":121,"h":19,"abs_x":269,"abs_y":1152}'>Volver a menú principal</strong></span></a></p>
+    </div>
+
+<script>
+function imprimirPDF(pdfURL) {
+  // Abre una nueva ventana con el PDF
+  var ventana = window.open(pdfURL, '_blank');
+  // Espera un momento antes de imprimir para asegurar que el PDF se haya cargado
+  setTimeout(function() {
+    // Imprime el PDF
+    ventana.print();
+  }, 1000);
+}
+</script>
+</body>
+</html>

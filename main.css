@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://i.ibb.co/gW6xp3j/Colorido-Ilustraci-n-Proyecto-de-Grupo-En-Blanco-Presentaci-n-de-Educaci-n-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: #000;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(0, 255, 0, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #fff;
+} 
+
+input.invalid {
+    border: 1px solid red;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #000;
+    border-bottom: 1px solid #A5DAFF;
+}
+
+.contact-form form button {
+    background: #A5DAFF;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #A5DAFF;
+    color: #fff;
+    transition: background-color 0.5s ease-out;
+    outline: 0;
+}
+
+.contact-form form input[type="radio"]{ 
+    display: none;
+}
+.contact-form .radio label {
+    color: #000;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px 5px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all 50.s |;
+    -o-transition:all 0.50s|;
+    transition: all 0.50s|;
+}
+
+.contact-form .radio label:hover {
+    background: #A5DAFF ;
+
+}
+
+.contact-form .radio label:before {
+content: "";
+width: 17px;
+height: 17px;
+display: inline-block;
+background: none;
+border: 3px solid #A5DAFF ;
+border-radius: 50%;
+position: absolute;
+left:17px ;
+top: 4px;
+
+}
+
+.contact-form .radio label:before{
+    border-radius: 3px;
+}
+.contact-form form input[type="radio"]:checked + label {
+padding: 5px 15px;
+background:#A5DAFF;
+border-radius: 2px;
+color: #000;
+}
+
+.contact-form form input[type="radio"]:checked + label:before{
+    display: none;
+}
+
+
+/* CONTACT INFO */
+.contact-info {
+    background: #A5DAFF;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+
+select {
+  font-size: 20px; /* Cambiar el tamaño del texto */
+  font-family: 'Quicksand', sans-serif;
+  background-color: #A5DAFF; /* Cambiar el color de fondo */
+  color: #333; /* Cambiar el color del texto */
+  border: 1px solid #fff;
+  cursor: pointer;
+
+}
+
+contact-info textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #000;
+    border-bottom: 1px solid #A5DAFF;
+}
+
+
+}

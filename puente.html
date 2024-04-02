@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la inscripción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            color: red;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<?php
+    // Datos de conexión a la base de datos
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "inscripcion";
+
+    // Crear conexión
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar conexión
+    if ($conn->connect_error) {
+        die("Falló la conexión: " . $conn->connect_error);
+    }
+// Verificar si hay un ID de usuario en la sesión
+if (isset($_SESSION['user_type'])) {
+    $user_type = $_SESSION['user_type'];
+    // Consulta SQL para obtener el tipo de usuario del usuario actual
+   $check_query = "SELECT * FROM registro WHEREuser_type = '$user_type'";
+            $check_result = $conn->query($check_query);
+
+    // Preparar la consulta
+    $stmt = $conn->prepare($check_query);
+
+    // Vincular parámetros
+    $stmt->bind_param("i", $id_usuario); // 'i' indica un valor entero
+
+    // Ejecutar la consulta
+    $stmt->execute();
+
+    // Obtener el resultado de la consulta
+    $result = $stmt->get_result();
+
+    // Verificar si se encontró algún resultado
+    if ($result->num_rows > 0) {
+        // Obtener el tipo de usuario
+        $row = $result->fetch_assoc();
+        $user_type = $row['user_type'];
+
+        // Redirigir según el tipo de usuario
+        if ($user_type === "admin") {
+            header('Location: menu2.html');
+            exit();
+        } else {
+            header('Location: menu1.html');
+            exit();
+        }
+    } else {
+        echo "No se encontró información del usuario.";
+    }
+
+    // Cerrar conexión
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "No se ha iniciado sesión.";
+}
+?>
+</body>
+</html>

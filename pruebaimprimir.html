@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impresión de PDF</title>
+<!-- Agrega Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  .pdf-container {
+    width: 100%;
+    text-align: center;
+  }
+  .pdf-icon {
+    font-size: 36px;
+    color: blue;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="pdf-container">
+  <!-- Cambia el icono aquí -->
+  <div class="pdf-icon" onclick="imprimirPDF()"><i class="fas fa-file-pdf"></i></div>
+</div>
+
+<script>
+function imprimirPDF() {
+  // Reemplaza 'ruta/al/archivo.pdf' con la ruta a tu archivo PDF
+  var pdfURL = 'ruta/al/archivo.pdf';
+  // Abre una nueva ventana con el PDF
+  var ventana = window.open(pdfURL, '_blank');
+  // Espera un momento antes de imprimir para asegurar que el PDF se haya cargado
+  setTimeout(function() {
+    // Imprime el PDF
+    ventana.print();
+  }, 1000);
+}
+</script>
+
+</body>
+</html>

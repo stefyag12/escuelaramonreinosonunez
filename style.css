@@ -1,0 +1,101 @@
+/* Estilos para la tabla */
+
+body {
+background-image: url("img-4.png");
+background-repeat: no-repeat;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para el formulario de búsqueda */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type=text] {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #3e8e41;
+}
+
+    .regresar-container {
+        text-align: right;
+    }
+
+    label[for="regresar"] {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+/* Estilos para los botones de acción */
+form[action="modificar.php"],
+form[action="imprimir.php"],
+form[action="eliminar.php"] {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+form[action="modificar.php"] label,
+form[action="imprimir.php"] label,
+form[action="eliminar.php"] label {
+  margin-right: 10px;
+}
+
+form[action="modificar.php"] input[type=text],
+form[action="imprimir.php"] input[type=text],
+form[action="eliminar.php"] input[type=text] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+form[action="modificar.php"] input[type=submit],
+form[action="imprimir.php"] input[type=submit],
+form[action="eliminar.php"] input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+form[action="modificar.php"] input[type=submit]:hover,
+form[action="imprimir.php"] input[type=submit]:hover,
+form[action="eliminar.php"] input[type=submit]:hover {
+  background-color: #3e8e41;
+}

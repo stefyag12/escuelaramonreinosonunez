@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proceso de Inscripcion</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <style>
+
+        body {
+    background-image: url(https://i.ibb.co/gW6xp3j/Colorido-Ilustraci-n-Proyecto-de-Grupo-En-Blanco-Presentaci-n-de-Educaci-n-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+        .regresar {
+            text-decoration: none;
+            color: white;
+            background-color: #0196FF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1000px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Ajuste para separar del formulario */
+            margin-left: 1450px; /* Mueve el enlace al lado izquierdo */
+
+        }
+
+        .regresar:hover {
+            background-color: #309AE5;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="content">
+
+    <h1 class="logo"> Formulario de <span>Inscripción</span></h1>
+    <a href="menu2.html" class="regresar">Regresar al menú</a>
+
+
+    <div class="contact-wrapper animated bounceInUp">
+        <div class="contact-form">
+            <h3>Por favor completa toda la información</h3>
+            <form method="POST" action="confirmacion.php" id="formulario">
+                <p>
+                    <label for="cedula">Cédula estudiantil</label>
+                    <input type="text" name="cedula" id="cedula" minlength="5" maxlength="11" pattern="\d*" title="Por favor, ingrese solo números." required>
+                </p>
+                <p>
+                    <label for="nombre_estudiante">Nombre completo del estudiante</label>
+                    <input type="text" name="nombre_estudiante" id="nombre_estudiante" minlength="1" maxlength="100" required>
+                </p>
+                <p>
+                    <label for="nombre_representante"> Nombre completo del representante</label>
+                    <input type="text" name="nombre_representante" id="nombre_representante" minlength="1" maxlength="100" required>
+                </p>
+                <p>
+                    <label for="observacion">Dirección</label>
+                    <input type="text" name="direccion" id="direccion" minlength="1" maxlength="150" required>
+                </p>
+                <p>
+                    <label for="edad">Edad del Estudiante</label>
+                    <input type="text" name="edad" id="edad" minlength="1" maxlength="2" pattern="\d*" title="Por favor, ingrese solo números." required>
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono" minlength="11" maxlength="11" pattern="\d*" title="Por favor, ingrese solo números." required>
+                </p>
+                <p>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email"  id="email">
+                </p>
+
+                <p>
+                    <label for="grado">Grado actual:</label>
+                    <select id="grado" name="grado" id="grado" required>
+                        <option value="">Seleccionar grado</option>
+                        <option value="1ero">1ero</option>
+                        <option value="2do">2do</option>
+                        <option value="3ero">3ero</option>
+                        <option value="4to">4to</option>
+                        <option value="5to">5to</option>
+                        <option value="6to">6to</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" id="fecha_nacimiento" required><br><br>
+                </p>
+
+                <div class="radio">
+                    <p>
+                        <p><strong>Sexo</strong></p>
+                        <input type="radio" name="sexo" id="sexo_hembra" value="Hembra" required>
+                        <label for="sexo_hembra">Hembra</label>
+                        <input type="radio" name="sexo" id="sexo_varon" value="Varon" required>
+                        <label for="sexo_varon">Varón</label>
+                    </p>
+                </div>
+
+                <p class="block">
+                    <label for="observacion">Observaciones</label>
+                    <textarea name="observacion" id="observacion"></textarea>
+                </p>
+                <p class="block">
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </p>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h4>Mas Información</h4>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Delicias Nuevas, Calle San Félix, Pqa. Ambrosio, Cabimas, Zulia.</li>
+                <li><i class="fas fa-phone"></i> (0412) 9687667 </li>
+                <li><i class="fas fa-envelope-open-text"></i> escramonreinoso@gmail.com</li>
+            </ul>
+            <p>Escuela de educación primaria, excelente personal administrativo, docente y obrero.</p>
+
+            <div class="radio button">
+                <h3> Documentos Entregados</h3>
+                <p><strong>Acta de Nacimiento</strong></p>
+                <input type="radio" name="acta" id="acta_si" value="Sí" required>
+                <label for="acta_si">Sí</label>
+                <input type="radio" name="acta" id="acta_no" value="No" required>
+                <label for="acta_no">No</label>
+
+                <!-- Copia de cedula del representante -->
+                <p><strong>Copia de cédula del representante</strong></p>
+                <input type="radio" name="fotorep" id="fotorep_si" value="Sí" required>
+                <label for="fotorep_si">Sí</label>
+                <input type="radio" name="fotorep" id="fotorep_no" value="No" required>
+                <label for="fotorep_no">No</label>
+
+                <!-- Foto tipo carnet del estudiante -->
+                <p><strong>Foto tipo carnet del estudiante</strong></p>
+                <input type="radio" name="fotoest" id="fotoest_si" value="Sí" required>
+                <label for="fotoest_si">Sí</label>
+                <input type="radio" name="fotoest" id="fotoest_no" value="No" required>
+                <label for="fotoest_no">No</label>
+
+                <!-- Carton de Vacunación -->
+                <p><strong>Carton de Vacunación</strong></p>
+                <input type="radio" name="vacuna" id="vacuna_si" value="Sí" required>
+                <label for="vacuna_si">Sí</label>
+                <input type="radio" name="vacuna" id="vacuna_no" value="No" required>
+                <label for="vacuna_no">No</label>
+
+                <!-- Certificado del último grado aprobado -->
+                <p><strong>Certificado del último grado aprobado</strong></p>
+                <input type="radio" name="certificado" id="certificado_si" value="Sí" required>
+                <label for="certificado_si">Sí</label>
+                <input type="radio" name="certificado" id="certificado_no" value="No" required>
+                <label for="certificado_no">No</label>
+
+                <!-- Cardiovascular -->
+                <p><strong>Cardiovascular</strong></p>
+                <input type="radio" name="cardio" id="cardio_si" value="Sí" required>
+                <label for="cardio_si">Sí</label>
+                <input type="radio" name="cardio" id="cardio_no" value="No" required>
+                <label for="cardio_no">No</label>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const edadInput = document.getElementById('edad');
+    const fechaNacimientoInput = document.getElementById('fecha_nacimiento');
+
+    edadInput.addEventListener('input', () => {
+        const edad = parseInt(edadInput.value);
+        if (!isNaN(edad)) {
+            const fechaActual = new Date();
+            const anoActual = fechaActual.getFullYear();
+            const anoNacimiento = anoActual - edad;
+            const mes = fechaActual.getMonth() + 1; // Mes actual
+            const dia = fechaActual.getDate(); // Día actual
+            const fechaNacimiento = new Date(`${anoNacimiento}-${mes}-${dia}`);
+            fechaNacimientoInput.valueAsDate = fechaNacimiento;
+        } else {
+            fechaNacimientoInput.value = '';
+        }
+    });
+
+    fechaNacimientoInput.addEventListener('input', () => {
+        const fechaNacimiento = new Date(fechaNacimientoInput.value);
+        const fechaActual = new Date();
+        const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+        edadInput.value = edad;
+    });
+</script>
+</html>

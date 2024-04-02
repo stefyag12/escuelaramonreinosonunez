@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilitos.css.css">
+
+      <style>
+	body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: url(https://i.ibb.co/7Smjmpk/Colorido-Ilustraci-n-Proyecto-de-Grupo-En-Blanco-Presentaci-n-de-Educaci-n-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+</style> 
+</head>  
+<body>
+ <form class="formulario" action="login.php" method="post">
+    
+    <h1>Inicia Sesi&oacuten</h1>
+     <div class="contenedor">
+     <form action="registroiniciosesion.php" method="post">
+     
+         
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text" name="username" placeholder="Inserte Usuario">
+         
+         </div>
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input type="password" name="password" placeholder="Contraseña">
+         
+         </div>
+         <input type="submit" value="Continuar" class="button">
+
+       <?php if (!empty($error_msg)) { ?>
+                <p style="color: red;"><?php echo $error_msg; ?></p>
+            <?php } ?>
+
+         <p>Al iniciar sesión, podrás insertar informacion sobre estudiantes y más.</p>
+     </div>
+    </form>
+</body>
+</html>

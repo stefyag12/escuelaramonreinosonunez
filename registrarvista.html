@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="estilitos.css.css">
+
+  <style>
+    .submit {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    a {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.a:hover {
+    background: cadetblue;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-image: url(https://i.ibb.co/7Smjmpk/Colorido-Ilustraci-n-Proyecto-de-Grupo-En-Blanco-Presentaci-n-de-Educaci-n-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+  </style>
+</head>  
+<body>
+ <form class="formulario" action="registro.php" method="post">
+    
+    <h1>Registrate</h1>
+     <div class="contenedor">
+         <div class="input-contenedor">
+             <i class="fas fa-user icon"></i>
+             <input type="text" name="username" placeholder="Ingresa nombre de usuario">
+         </div>
+
+         <div class="input-contenedor">
+             <i class="fas fa-envelope icon"></i>
+             <input type="password" name="password" placeholder="Contraseña">
+         </div>
+
+         <div class="input-contenedor">
+             <i class="fas fa-key icon"></i>
+             <input type="password" name="repeatpassword" placeholder="Repita la contraseña">
+         </div>
+
+           <div class="input-contenedor">
+            <p>Seleccione el tipo de usuario:</p>
+            <input type="radio" id="admin" name="user_type" value="admin">
+            <label for="admin">Director/a</label><br>
+            <input type="radio" id="normal_user" name="user_type" value="normal_user">
+            <label for="normal_user">Secretaria</label>
+        </div>
+
+         <input type="submit" value="Continuar" class="button"><br><br>
+         <a href= "menu2.html" class="submit">Regresar</a>
+     </div>
+    </form>
+</body>
+</html>
